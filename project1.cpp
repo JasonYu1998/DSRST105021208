@@ -1,13 +1,15 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 #include <queue>
-#include<time.h> 
+#include <time.h> 
 using namespace std;
 
-int main(){
+int main(int argc,char* argv[]){
 	int m,n,num=0;
-	ifstream test("matrix.data");
-	test >> m >> n;
+    string str(argv[1]); 
+	ifstream test(str+"/matrix.data");
+test >> m >> n;
 	int A[3*n+4];
 	A[0]=-2147483648;
 	for(int i=n+1;i<3*n+4;i++) A[i]=-2147483648;
@@ -51,13 +53,15 @@ int main(){
 
 				}
 	}
-	ofstream peak("final.peak");
+	ofstream peak(str+"/final.peak");
 	peak << num <<endl;
 	while(!point.empty()){
-		peak << point.front() << " ";
+		cout << point.front() << " ";
 		point.pop();
-		peak << point.front() << endl;
+		cout << point.front() << endl;
 		point.pop();
 	} 
+    cout << (double)clock() / CLOCKS_PER_SEC << " S";
+    peak.close();
 		return 0;
 }
