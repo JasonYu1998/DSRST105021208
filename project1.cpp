@@ -8,7 +8,7 @@ using namespace std;
 int main(int argc,char* argv[]){
 	int m,n,num=0;
     string str(argv[1]); 
-	ifstream test(./str+"/matrix.data");
+	ifstream test("./"+str+"/matrix.data");
 	test >> m >> n;
 	int A[3*n+4];
 	A[0]=-2147483648;
@@ -53,7 +53,7 @@ int main(int argc,char* argv[]){
 
 				}
 	}
-	ofstream peak(./str+"/final.peak");
+	ofstream peak("./"+str+"/final.peak");
 	peak << num <<endl;
 	while(!point.empty()){
 		peak << point.front() << " ";
