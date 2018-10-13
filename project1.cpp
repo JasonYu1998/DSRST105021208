@@ -20,20 +20,20 @@ test >> m >> n;
 			int z=(n+1)*(i%3)+j+1;
 			if(i==0) continue;
 			else if(i==1){
-				if((z-n-1)%(n+1)==0 && A[z-(n+1)]>=A[z-(n+1)+1] && A[z-(n+1)]>=A[z] && A[z-(n+1)]>=A[(z)]) {num++;point.push(i);point.push(j);}
-				else if ((z-(n+1))%(n+1)==(n+1)-1 && A[z-(n+1)]>=A[z-(n+1)-1] && A[z-(n+1)]>=A[z] && A[z-(n+1)]>=A[(z)]) {num++;point.push(i);point.push(j);}
-				else if(A[z-(n+1)]>=A[z-(n+1)+1] && A[z-(n+1)]>=A[z-(n+1)-1] && A[z-(n+1)]>=A[z] && A[z-(n+1)]>=A[(z)]) {num++;point.push(i);point.push(j);}
+				if((z-n-1)%(n+1)==0 && A[z-(n+1)]>=A[z-(n+1)+1] && A[z-(n+1)]>=A[z] && A[z-(n+1)]>=A[(z)]) {num++;point.push(i);point.push(j+1);}
+				else if ((z-(n+1))%(n+1)==(n+1)-1 && A[z-(n+1)]>=A[z-(n+1)-1] && A[z-(n+1)]>=A[z] && A[z-(n+1)]>=A[(z)]) {num++;point.push(i);point.push(j+1);}
+				else if(A[z-(n+1)]>=A[z-(n+1)+1] && A[z-(n+1)]>=A[z-(n+1)-1] && A[z-(n+1)]>=A[z] && A[z-(n+1)]>=A[(z)]) {num++;point.push(i);point.push(j+1);}
 			}
 			else {
 				if(i%3==0){
-					if((z+2*(n+1))%(n+1)==0 && A[z+2*(n+1)]>=A[z+2*(n+1)+1] && A[z+2*(n+1)]>=A[(z+2*(n+1))%(n+1)] && A[z+2*(n+1)]>=A[(z+2*(n+1))%(n+1)+(n+1)] && A[z+2*(n+1)]>=A[(z+2*(n+1))%(n+1)+2*(n+1)]) {num++;point.push(i);point.push(j);}
-					else if((z+2*(n+1))%(n+1)==(n+1)-1 && A[z+2*(n+1)]>=A[z+2*(n+1)-1] && A[z+2*(n+1)]>=A[(z+2*(n+1))%(n+1)] && A[z+2*(n+1)]>=A[(z+2*(n+1))%(n+1)+(n+1)] && A[z+2*(n+1)]>=A[(z+2*(n+1))%(n+1)+2*(n+1)]) {num++;point.push(i);point.push(j);}
-					else if(A[z+2*(n+1)]>=A[z+2*(n+1)-1] && A[z+2*(n+1)]>=A[z+2*(n+1)+1] && A[z+2*(n+1)]>=A[(z+2*(n+1))%(n+1)] && A[z+2*(n+1)]>=A[(z+2*(n+1))%(n+1)+(n+1)] && A[z+2*(n+1)]>=A[(z+2*(n+1))%(n+1)+2*(n+1)]) {num++;point.push(i);point.push(j);}
+					if((z+2*(n+1))%(n+1)==0 && A[z+2*(n+1)]>=A[z+2*(n+1)+1] && A[z+2*(n+1)]>=A[(z+2*(n+1))%(n+1)] && A[z+2*(n+1)]>=A[(z+2*(n+1))%(n+1)+(n+1)] && A[z+2*(n+1)]>=A[(z+2*(n+1))%(n+1)+2*(n+1)]) {num++;point.push(i);point.push(j+1);}
+					else if((z+2*(n+1))%(n+1)==(n+1)-1 && A[z+2*(n+1)]>=A[z+2*(n+1)-1] && A[z+2*(n+1)]>=A[(z+2*(n+1))%(n+1)] && A[z+2*(n+1)]>=A[(z+2*(n+1))%(n+1)+(n+1)] && A[z+2*(n+1)]>=A[(z+2*(n+1))%(n+1)+2*(n+1)]) {num++;point.push(i);point.push(j+1);}
+					else if(A[z+2*(n+1)]>=A[z+2*(n+1)-1] && A[z+2*(n+1)]>=A[z+2*(n+1)+1] && A[z+2*(n+1)]>=A[(z+2*(n+1))%(n+1)] && A[z+2*(n+1)]>=A[(z+2*(n+1))%(n+1)+(n+1)] && A[z+2*(n+1)]>=A[(z+2*(n+1))%(n+1)+2*(n+1)]) {num++;point.push(i);point.push(j+1);}
 				}
 				else {
-					if((z-(n+1))%(n+1)==0 && A[z-(n+1)]>=A[z-(n+1)+1] && A[z-(n+1)]>=A[(z-(n+1))%(n+1)] && A[z-(n+1)]>=A[(z-(n+1))%(n+1)+(n+1)] && A[z-(n+1)]>=A[(z-(n+1))%(n+1)+2*(n+1)]) {num++;point.push(i);point.push(j);}
-					else if((z-(n+1))%(n+1)==(n+1)-1 && A[z-(n+1)]>=A[z-(n+1)-1] && A[z-(n+1)]>=A[(z-(n+1))%(n+1)] && A[z-(n+1)]>=A[(z-(n+1))%(n+1)+(n+1)] && A[z-(n+1)]>=A[(z-(n+1))%(n+1)+2*(n+1)]) {num++;point.push(i);point.push(j);}
-					else if(A[z-(n+1)]>=A[z-(n+1)+1] && A[z-(n+1)]>=A[z-(n+1)-1] && A[z-(n+1)]>=A[(z-(n+1))%(n+1)] && A[z-(n+1)]>=A[(z-(n+1))%(n+1)+(n+1)] && A[z-(n+1)]>=A[(z-(n+1))%(n+1)+2*(n+1)]) {num++;point.push(i);point.push(j);}
+					if((z-(n+1))%(n+1)==0 && A[z-(n+1)]>=A[z-(n+1)+1] && A[z-(n+1)]>=A[(z-(n+1))%(n+1)] && A[z-(n+1)]>=A[(z-(n+1))%(n+1)+(n+1)] && A[z-(n+1)]>=A[(z-(n+1))%(n+1)+2*(n+1)]) {num++;point.push(i);point.push(j+1);}
+					else if((z-(n+1))%(n+1)==(n+1)-1 && A[z-(n+1)]>=A[z-(n+1)-1] && A[z-(n+1)]>=A[(z-(n+1))%(n+1)] && A[z-(n+1)]>=A[(z-(n+1))%(n+1)+(n+1)] && A[z-(n+1)]>=A[(z-(n+1))%(n+1)+2*(n+1)]) {num++;point.push(i);point.push(j+1);}
+					else if(A[z-(n+1)]>=A[z-(n+1)+1] && A[z-(n+1)]>=A[z-(n+1)-1] && A[z-(n+1)]>=A[(z-(n+1))%(n+1)] && A[z-(n+1)]>=A[(z-(n+1))%(n+1)+(n+1)] && A[z-(n+1)]>=A[(z-(n+1))%(n+1)+2*(n+1)]) {num++;point.push(i);point.push(j+1);}
 				}
 			}
 		}
@@ -56,9 +56,9 @@ test >> m >> n;
 	ofstream peak(str+"/final.peak");
 	peak << num <<endl;
 	while(!point.empty()){
-		cout << point.front() << " ";
+		peak << point.front() << " ";
 		point.pop();
-		cout << point.front() << endl;
+		peak << point.front() << endl;
 		point.pop();
 	} 
     cout << (double)clock() / CLOCKS_PER_SEC << " S";
