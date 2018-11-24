@@ -123,7 +123,7 @@ int main(int argc,char* argv[]){
     int **dist = new int*[n+2];
     int *tmp = new int[(n+2)*(m+2)];
     for(i=0;i<n+2;i++) dist[i] = &(tmp[i*(m+2)]);
-    for(i=0;i<n+2;i++) for(j=0;j<m+2;j++) dist[i][j]='/0';
+    for(i=0;i<n+2;i++) for(j=0;j<m+2;j++) dist[i][j]=0;
     for(j=1;j<=m;j++) { dist[0][j] = n*m; dist[n+1][j] = n*m; }
     for(i=1;i<=n;i++) {
         dist[i][0] = n*m;
@@ -409,7 +409,7 @@ int main(int argc,char* argv[]){
 
 
     point.push(rx);point.push(ry);co++;
-    ofstream peak(str+"/final.peak");
+    ofstream peak(str+"/final.path");
 	peak << co <<endl;
 	while(!point.empty()){
 		peak << point.front() << " ";
