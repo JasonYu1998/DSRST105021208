@@ -77,6 +77,29 @@ class Student{
 					return;
                 }
             for(i=0;i<5;i++) for(j=0;j<6;j++){
+                if(color[i][j] == inputColor ){
+                	if((color[i+1][j] == otherColor && ((Max[i][j]-Record[i][j]) == (Max[i+1][j]-Record[i+1][j]))) ||
+					   (color[i-1][j] == otherColor && ((Max[i][j]-Record[i][j]) == (Max[i-1][j]-Record[i-1][j]))) ||
+					   (color[i][j+1] == otherColor && ((Max[i][j]-Record[i][j]) == (Max[i][j+1]-Record[i][j+1]))) ||
+					   (color[i][j-1] == otherColor && ((Max[i][j]-Record[i][j]) == (Max[i][j-1]-Record[i][j-1])))){
+                    x = i;
+                    y = j;
+                    c++;
+					return;
+                }
+                }
+            }
+
+			for(i=0;i<5;i++) for(j=0;j<6;j++){
+                if(color[i][j] == inputColor && (Record[i][j] < Max[i][j])-1 ) {
+                    x = i;
+                    y = j;
+                    c++;
+					return;
+                }
+
+        }
+            for(i=0;i<5;i++) for(j=0;j<6;j++){
                 if(color[i][j] == White ){
                     x = i;
                     y = j;
