@@ -4,7 +4,14 @@ class Student{
             int i;
             int j;
             int c=0;
-        if(color[0][0] == White ){
+            Color otherColor;
+
+            if(inputColor == Red) otherColor = Blue;
+            else if(inputColor == Blue) otherColor = Red;
+
+
+
+            if(color[0][0] == White ){
                     x = 0;
                     y = 0;
                     c++;
