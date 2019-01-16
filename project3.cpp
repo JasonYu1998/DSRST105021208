@@ -4,7 +4,78 @@ class Student{
             int i;
             int j;
             int c=0;
-
+        if(color[0][0] == White ){
+                    x = 0;
+                    y = 0;
+                    c++;
+                    return;
+                }
+            else if(color[0][5] == White ){
+                    x = 0;
+                    y = 5;
+                    c++;
+                    return;
+                }
+            else if(color[4][0] == White ){
+                    x = 4;
+                    y = 0;
+                    c++;
+                    return;
+                }
+			else if(color[4][5] == White ){
+                    x = 4;
+                    y = 5;
+                    c++;
+					return;
+                }
+            else if(color[0][2] == White ){
+                    x = 0;
+                    y = 2;
+                    c++;
+					return;
+                }
+            else if(color[4][2] == White ){
+                    x = 4;
+                    y = 2;
+                    c++;
+					return;
+                }
+            else if(color[1][1] == White ){
+                    x = 1;
+                    y = 1;
+                    c++;
+					return;
+                }
+            else if(color[4][3] == White ){
+                    x = 4;
+                    y = 3;
+                    c++;
+					return;
+                }
+            else if(color[2][0] == White ){
+                    x = 2;
+                    y = 0;
+                    c++;
+					return;
+                }
+            else if(color[2][5] == White ){
+                    x = 2;
+                    y = 5;
+                    c++;
+					return;
+                }
+            else if(color[2][2] == White ){
+                    x = 2;
+                    y = 2;
+                    c++;
+					return;
+                }
+            else if(color[2][3] == White ){
+                    x = 2;
+                    y = 3;
+                    c++;
+					return;
+                }
             for(i=0;i<5;i++) for(j=0;j<6;j++){
                 if(color[i][j] == White ){
                     x = i;
